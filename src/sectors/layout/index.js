@@ -1,6 +1,6 @@
 const layout = {
   name: "Layout",
-  buildProps: ["layout-visibility", "alignment"],
+  buildProps: ["layout-visibility"],
   properties: [
     {
       id: "layout-visibility",
@@ -16,28 +16,6 @@ const layout = {
         {
           value: "none",
           name: "Hidden"
-        }
-      ]
-    },
-    {
-      id: "alignment",
-      type: "radio",
-      property: "align-box",
-      list: [
-        {
-          value: "left",
-          name: "Left",
-          className: "fa fa-align-left"
-        },
-        {
-          value: "center",
-          name: "Center",
-          className: "fa fa-align-center"
-        },
-        {
-          value: "right",
-          name: "Right",
-          className: "fa fa-align-right"
         }
       ]
     }
