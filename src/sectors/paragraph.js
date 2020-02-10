@@ -1,6 +1,6 @@
 const paragraph = {
   name: "Paragraph",
-  buildProps: ["text-align", "list-style-type"],
+  buildProps: ["text-align", "list-style-type", "line-height", "text-shadow"],
   properties: [
     {
       id: "text-align",
@@ -34,7 +34,6 @@ const paragraph = {
           className: "fa fa-align-right"
         },
       ],
-      toRequire: 1
     },
     {
       id: "list-style-type",
@@ -64,8 +63,7 @@ const paragraph = {
           className: "fa fa-outdent"
         },
       ],
-      toRequire: 1
-    }
+    },
   ]
 };
 
