@@ -41,6 +41,3 @@ editor.on("component:selected", function(model) {
   model.set("resizable", true);
 });
 
-editor.on("update:component:style:align-box", function(model) {
-  console.log("model", model);
-});
