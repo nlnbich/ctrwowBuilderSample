@@ -1,2 +1,0 @@
-# ctrwowBuilderSample
-Created with CodeSandbox
