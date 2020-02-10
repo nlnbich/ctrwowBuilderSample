@@ -35,35 +35,35 @@ const paragraph = {
         },
       ],
     },
-    {
-      id: "list-style-type",
-      name: "Style",
-      property: "list-style-type",
-      type: "radio",
-      defaults: "",
-      list: [
-        {
-          value: "bulleted",
-          name: "Bulleted List",
-          className: "fa fa-list-ul"
-        },
-        {
-          value: "numbered",
-          name: "Numbered List",
-          className: "fa fa-list-ol"
-        },
-        {
-          value: "decrease",
-          name: "Decrease Indent",
-          className: "fa fa-indent"
-        },
-        {
-          value: "increase",
-          name: "Increase Indent",
-          className: "fa fa-outdent"
-        },
-      ],
-    },
+    // {
+    //   id: "list-style-type",
+    //   name: "Style",
+    //   property: "list-style-type",
+    //   type: "radio",
+    //   defaults: "",
+    //   list: [
+    //     {
+    //       value: "bulleted",
+    //       name: "Bulleted List",
+    //       className: "fa fa-list-ul"
+    //     },
+    //     {
+    //       value: "numbered",
+    //       name: "Numbered List",
+    //       className: "fa fa-list-ol"
+    //     },
+    //     {
+    //       value: "decrease",
+    //       name: "Decrease Indent",
+    //       className: "fa fa-indent"
+    //     },
+    //     {
+    //       value: "increase",
+    //       name: "Increase Indent",
+    //       className: "fa fa-outdent"
+    //     },
+    //   ],
+    // },
   ]
 };
 
