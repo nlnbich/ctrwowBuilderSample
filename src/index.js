@@ -10,6 +10,8 @@ import paragraph from "./sectors/paragraph";
 
 import sectors from "./sectors";
 
+import actionLoader from './sectors/actionLoader';
+
 var editor = grapesjs.init({
   container: "#app",
   fromElement: true,
@@ -20,6 +22,8 @@ var editor = grapesjs.init({
   },
   plugins: [basicBlocks]
 });
+
+actionLoader(editor);
 
 function moveTraitToSector(trait, sector) {
   trait.classList.add("gjs-sm-property");
