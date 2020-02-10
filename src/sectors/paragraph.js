@@ -1,6 +1,6 @@
 const paragraph = {
   name: "Paragraph",
-  buildProps: ["text-align", "list-style-type", "line-height", "text-shadow"],
+  buildProps: ["text-align", "line-height", "text-shadow"],
   properties: [
     {
       id: "text-align",
