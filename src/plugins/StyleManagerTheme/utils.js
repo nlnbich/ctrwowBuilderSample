@@ -63,14 +63,22 @@ const styleManagerUtils = (function() {
     }
   }
 
+  function initSectors(sectors) {
+    const sm = editor.StyleManager
+    const currentSectors = sm.getSectors()
+    currentSectors.reset()
+    currentSectors.add(sectors)
+    moveTraitToSector('gjs-clm-tags', 'gjs-sm-element_metadata')
+  }
+
   function initStyleManagerPanel(e) {
     editor = e
-    moveTraitToSector('gjs-clm-tags', 'gjs-sm-element_metadata')
     setupPanels(editor)
   }
 
   return {
     initStyleManagerPanel: initStyleManagerPanel,
+    initSectors: initSectors,
     moveTraitToSector: moveTraitToSector,
     componentSwitcher: componentSwitcher
   }

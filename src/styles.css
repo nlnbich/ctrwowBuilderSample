@@ -3,30 +3,3 @@ body {
   margin: 0;
   padding: 0;
 }
-/* Components */
-/* ---------- */
-@import url("./styles/components/flex/index.css");
-/* Other components as necessary */
-
-.gjs-resizer-h {
-  border-radius: 50%;
-  border-width: 2px;
-}
-
-.gjs-dashed *[data-highlightable] {
-  outline-offset: -1px;
-}
-.gjs-comp-selected {
-  outline: 2px solid #3b97e3 !important;
-}
-
-#gjs-sm-color,
-#gjs-sm-letter-spacing,
-#gjs-sm-text-decoration,
-#gjs-sm-font-style {
-  width: 50%;
-}
-
-#gjs-sm-font.disable, #gjs-sm-paragraph.disable, #gjs-sm-button-label.disable, #gjs-sm-click-actions.disable {
-  display: none !important;
-}

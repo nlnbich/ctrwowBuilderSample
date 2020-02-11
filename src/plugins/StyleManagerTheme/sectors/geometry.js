@@ -1,5 +1,5 @@
 const geometry = {
-    name: "Dimension",
+    name: "Geometry",
     buildProps: ["width", "height", "left", "top", "right", "bottom", "display", "position", "float", "max-width",
         "min-height",
         "margin",
