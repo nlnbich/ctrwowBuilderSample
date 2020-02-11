@@ -29,8 +29,7 @@ const paragraph = {
           name: "Justify",
           className: "fa fa-align-justify"
         }
-      ],
-      toRequire: 1
+      ]
     },
     {
       id: "list-style-type",
@@ -49,8 +48,7 @@ const paragraph = {
           name: "Numbered List",
           className: "fa fa-list-ol"
         }
-      ],
-      toRequire: 1
+      ]
     }
   ]
 };

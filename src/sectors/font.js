@@ -11,20 +11,17 @@ const font = {
   ],
   properties: [
     {
-      property: "font-family",
-      toRequire: 1
+      property: "font-family"
     },
     {
       property: "font-size",
-      toRequire: 1
+      defaults: 16
     },
     {
-      property: "color",
-      toRequire: 1
+      property: "color"
     },
     {
-      property: "letter-spacing",
-      toRequire: 1
+      property: "letter-spacing"
     },
     {
       property: "text-decoration",
@@ -47,8 +44,7 @@ const font = {
           name: "Line-through",
           className: "fa fa-strikethrough"
         }
-      ],
-      toRequire: 1
+      ]
     },
     {
       id: "font-style",
@@ -66,8 +62,7 @@ const font = {
           name: "Italic",
           className: "fa fa-italic"
         }
-      ],
-      toRequire: 1
+      ]
     }
   ]
 };

@@ -5,11 +5,15 @@ import geometry from "./geometry";
 import borderProperties from "./borderProperties";
 import backgroundProperties from "./backgroundProperties";
 import metadata from "./metadata";
+//import buttonLabel from "./buttonLabel";
+import clickActions from "./clickActions";
 
 export default [
   layout,
   font,
   paragraph,
+  clickActions,
+  //buttonLabel,
   geometry,
   borderProperties,
   backgroundProperties,
