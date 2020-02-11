@@ -15,26 +15,6 @@
     outline: 2px solid #3b97e3 !important;
 }
 
-#gjs-sm-dimension .gjs-sm-property {
-    display: flex !important;
-}
-
-#gjs-sm-dimension .gjs-sm-label {
-    background: rgba(0, 0, 0, 0.5);
-    margin: 0;
-    padding: 5px;
-    color: white;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    width: 60px;
-    text-align: center;
-}
-
-#gjs-sm-dimension .gjs-field {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-}
-
 #gjs-sm-color,
 #gjs-sm-letter-spacing,
 #gjs-sm-text-decoration,
