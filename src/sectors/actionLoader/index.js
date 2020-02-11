@@ -2,6 +2,7 @@ import './styles.css';
 
 const advancedSectors = {
     'paragraph': ['line-height', 'text-shadow'],
+    'dimension': ['right', 'bottom', 'display', 'position', 'float', 'max-width', 'min-height', 'margin', 'padding'],
 };
 
 export default (editor) => {
