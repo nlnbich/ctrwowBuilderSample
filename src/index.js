@@ -6,6 +6,7 @@ import './styles.css'
 
 // Plugins
 //import Collection from "./plugins/Collection";
+import actionLoader from './sectors/actionLoader';
 
 import sectors from './sectors'
 
@@ -19,6 +20,8 @@ var editor = grapesjs.init({
   },
   plugins: [basicBlocks]
 })
+
+actionLoader(editor);
 
 function moveTraitToSector(traitCls, sectorCls) {
   const trait = document.querySelector(`.${traitCls}`)

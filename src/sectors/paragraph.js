@@ -1,6 +1,6 @@
 const paragraph = {
   name: "Paragraph",
-  buildProps: ["text-align", "list-style-type"],
+  buildProps: ["text-align", "line-height", "text-shadow"],
   properties: [
     {
       id: "text-align",
@@ -10,46 +10,60 @@ const paragraph = {
       defaults: "left",
       list: [
         {
+          title: "Left Align",
           value: "left",
           name: "Left",
           className: "fa fa-align-left"
         },
         {
+          title: "Center Align",
           value: "center",
           name: "Center",
           className: "fa fa-align-center"
         },
         {
+          title: "Justify Align",
+          value: "justify",
+          name: "Justify",
+          className: "fa fa-align-justify"
+        },
+        {
+          title: "Right Align",
           value: "right",
           name: "Right",
           className: "fa fa-align-right"
         },
-        {
-          value: "justify",
-          name: "Justify",
-          className: "fa fa-align-justify"
-        }
-      ]
+      ],
     },
-    {
-      id: "list-style-type",
-      name: "Style",
-      property: "list-style-type",
-      type: "radio",
-      defaults: "left",
-      list: [
-        {
-          value: "disc",
-          name: "Bulleted List",
-          className: "fa fa-list-ul"
-        },
-        {
-          value: "decimal",
-          name: "Numbered List",
-          className: "fa fa-list-ol"
-        }
-      ]
-    }
+    // {
+    //   id: "list-style-type",
+    //   name: "Style",
+    //   property: "list-style-type",
+    //   type: "radio",
+    //   defaults: "",
+    //   list: [
+    //     {
+    //       value: "bulleted",
+    //       name: "Bulleted List",
+    //       className: "fa fa-list-ul"
+    //     },
+    //     {
+    //       value: "numbered",
+    //       name: "Numbered List",
+    //       className: "fa fa-list-ol"
+    //     },
+    //     {
+    //       value: "decrease",
+    //       name: "Decrease Indent",
+    //       className: "fa fa-indent"
+    //     },
+    //     {
+    //       value: "increase",
+    //       name: "Increase Indent",
+    //       className: "fa fa-outdent"
+    //     },
+    //   ],
+    // },
   ]
 };
 
