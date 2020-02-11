@@ -1,6 +1,10 @@
 const styleManagerUtils = (function() {
 
   const sectors = ['font', 'paragraph', 'click-actions']
+  const advancedSectors = {
+    'paragraph': ['line-height', 'text-shadow'],
+    'geometry': ['right', 'bottom', 'display', 'position', 'float', 'max-width', 'min-height', 'margin', 'padding'],
+  };
   let editor = null
 
   function moveTraitToSector(traitCls, sectorCls) {
@@ -63,12 +67,46 @@ const styleManagerUtils = (function() {
     }
   }
 
+  function actionLoader(){
+    Object.entries(advancedSectors).forEach(([sector, properties]) => {
+      const $sector = document.querySelector(`#gjs-sm-${sector}`);
+      if(!$sector) return
+      // hide all advanced properties
+      const $properties = $sector.querySelector(`.gjs-sm-properties`);
+      properties.forEach((property) => {
+        const $property = $properties.querySelector(`#gjs-sm-${property}`);
+        $property.classList.add('act-none');
+      });
+
+      // Add advanced button
+      const $title = $sector.querySelector(`.gjs-sm-title`);
+      const $action = document.createElement('div');
+      $action.classList.add('act-group');
+      $action.innerHTML = `<i class="fa fa-cogs act-adv" title="Advanced Options"></i>`;
+
+      // inject click event
+      const $advanced = $action.querySelector('.act-adv');
+      $advanced.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        $advanced.classList.toggle('act-active');
+        properties.forEach((property) => {
+          const $property = $properties.querySelector(`#gjs-sm-${property}`);
+          $property.classList.toggle('act-none');
+        });
+      });
+
+      $title.appendChild($action);
+    })
+  }
+
   function initSectors(sectors) {
     const sm = editor.StyleManager
     const currentSectors = sm.getSectors()
     currentSectors.reset()
     currentSectors.add(sectors)
     moveTraitToSector('gjs-clm-tags', 'gjs-sm-element_metadata')
+    actionLoader()
   }
 
   function initStyleManagerPanel(e) {
