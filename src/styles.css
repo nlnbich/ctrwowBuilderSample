@@ -46,3 +46,7 @@ body {
 #gjs-sm-font-style {
   width: 50%;
 }
+
+#gjs-sm-font.disable, #gjs-sm-paragraph.disable, #gjs-sm-button-label.disable, #gjs-sm-click-actions.disable {
+  display: none !important;
+}

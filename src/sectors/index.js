@@ -6,11 +6,15 @@ import borderProperties from "./borderProperties";
 import backgroundProperties from "./backgroundProperties";
 import flexProperties from "./flexProperties";
 import metadata from "./metadata";
+//import buttonLabel from "./buttonLabel";
+import clickActions from "./clickActions";
 
 export default [
   layout,
   font,
   paragraph,
+  clickActions,
+  //buttonLabel,
   geometry,
   borderProperties,
   backgroundProperties,
