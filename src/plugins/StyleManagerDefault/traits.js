@@ -1,21 +1,22 @@
 export default function (editor, opt = {}) {
   const trm = editor.TraitManager;
-  const textTrat = trm.getType('text');
+  //const textTrat = trm.getType('text');
+  const contentTrat = trm.getType("content-textarea");
 
-  trm.addType('content', {
+  !contentTrat && trm.addType('content-textarea', {
     events:{
       'keyup': 'onChange',
     },
 
     onValueChange: function () {
-      var md = this.model;
-      var target = md.target;
+      const md = this.model;
+      const target = md.target;
       target.set('content', md.get('value'));
     },
 
     getInputEl: function() {
       if(!this.inputEl) {
-        this.inputEl = textTrat.prototype.getInputEl.bind(this)();
+        this.inputEl = document.createElement('textarea');
         this.inputEl.value = this.target.get('content');
       }
       return this.inputEl;

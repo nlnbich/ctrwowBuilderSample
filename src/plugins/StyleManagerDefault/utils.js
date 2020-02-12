@@ -15,7 +15,7 @@ const styleManagerUtils = (function() {
   function hideSectors(pfx, sectors) {
     sectors.forEach(sector => {
       const $sector = document.getElementById(`${pfx}${sector}`);
-      $sector && $sector.classList.remove('disable')
+      $sector && $sector.classList.add('disable')
     })
   }
 
@@ -43,7 +43,7 @@ const styleManagerUtils = (function() {
   function handleLinkComponent(model, styleManager) {
     const pfx = styleManager.getConfig().stylePrefix
     model.set('editable', false)
-    !model.getTrait('text') && model.get('traits').add({ name: 'text', type: 'content', label: 'Content' })
+    !model.getTrait('text') && model.get('traits').add({ name: 'text', type: 'content-textarea', label: 'Content' })
     hideSectors(pfx, ['paragraph'])
     showSectors(pfx, ['font', 'click-actions'])
     //moveTraitToSector('gjs-trt-traits', 'gjs-sm-click-actions')
@@ -70,6 +70,7 @@ const styleManagerUtils = (function() {
   function initSectors(sectors) {
     const sm = editor.StyleManager
     const currentSectors = sm.getSectors()
+    if(currentSectors.length > 0) return
     currentSectors.reset()
     currentSectors.add(sectors)
   }
