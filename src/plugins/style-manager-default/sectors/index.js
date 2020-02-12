@@ -4,7 +4,7 @@ import paragraph from "./paragraph";
 import geometry from "./geometry";
 import borderProperties from "./borderProperties";
 import backgroundProperties from "./backgroundProperties";
-import flex from "./flexProperties";
+import flex from "./flex";
 import metadata from "./metadata";
 import extra from "./extra";
 //import buttonLabel from "./buttonLabel";
