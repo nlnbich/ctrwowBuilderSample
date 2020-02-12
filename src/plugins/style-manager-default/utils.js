@@ -4,6 +4,7 @@ const styleManagerUtils = (function() {
   const advancedSectors = {
     'paragraph': ['line-height', 'text-shadow'],
     'geometry': ['right', 'bottom', 'display', 'position', 'float', 'max-width', 'min-height', 'margin', 'padding'],
+    'flex': ['order', 'flex'],
   };
   let editor = null
 

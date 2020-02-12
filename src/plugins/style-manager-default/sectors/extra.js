@@ -1,5 +1,6 @@
 const flexProperties = {
   name: 'Extra',
+  open: false,
   buildProps: ['transition', 'perspective', 'transform'],
   properties: [
     {

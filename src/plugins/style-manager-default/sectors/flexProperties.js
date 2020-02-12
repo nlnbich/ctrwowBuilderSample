@@ -106,6 +106,38 @@ const flexProperties = {
       ]
     },
     {
+      name: 'Align',
+      property: 'align-self',
+      type: 'radio',
+      defaults: 'auto',
+      list: [
+        {
+          value: 'auto',
+          name: 'Auto'
+        },
+        {
+          value: 'flex-start',
+          title: 'Start',
+          className: 'icons-flex icon-al-start'
+        },
+        {
+          value: 'flex-end',
+          title: 'End',
+          className: 'icons-flex icon-al-end'
+        },
+        {
+          value: 'stretch',
+          title: 'Stretch',
+          className: 'icons-flex icon-al-str'
+        },
+        {
+          value: 'center',
+          title: 'Center',
+          className: 'icons-flex icon-al-center'
+        }
+      ]
+    },
+    {
       name: 'Order',
       property: 'order',
       type: 'integer',
@@ -138,38 +170,6 @@ const flexProperties = {
           units: ['px', '%', ''],
           unit: '',
           defaults: 'auto'
-        }
-      ]
-    },
-    {
-      name: 'Align',
-      property: 'align-self',
-      type: 'radio',
-      defaults: 'auto',
-      list: [
-        {
-          value: 'auto',
-          name: 'Auto'
-        },
-        {
-          value: 'flex-start',
-          title: 'Start',
-          className: 'icons-flex icon-al-start'
-        },
-        {
-          value: 'flex-end',
-          title: 'End',
-          className: 'icons-flex icon-al-end'
-        },
-        {
-          value: 'stretch',
-          title: 'Stretch',
-          className: 'icons-flex icon-al-str'
-        },
-        {
-          value: 'center',
-          title: 'Center',
-          className: 'icons-flex icon-al-center'
         }
       ]
     }
