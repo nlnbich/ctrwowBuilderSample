@@ -6,6 +6,7 @@ import borderProperties from "./borderProperties";
 import backgroundProperties from "./backgroundProperties";
 import flexProperties from "./flexProperties";
 import metadata from "./metadata";
+import extra from "./extra";
 //import buttonLabel from "./buttonLabel";
 import clickActions from "./clickActions";
 
@@ -19,5 +20,6 @@ export default [
   borderProperties,
   backgroundProperties,
   flexProperties,
-  metadata
+  metadata,
+  extra
 ];
