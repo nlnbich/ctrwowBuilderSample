@@ -77,6 +77,7 @@ const styleManagerUtils = (function() {
       properties.forEach((property) => {
         const $property = $properties.querySelector(`#gjs-sm-${property}`);
         $property.classList.add('act-none');
+        $property.classList.add('act-animated');
       });
 
       // Add advanced button
@@ -94,10 +95,30 @@ const styleManagerUtils = (function() {
         properties.forEach((property) => {
           const $property = $properties.querySelector(`#gjs-sm-${property}`);
           $property.classList.toggle('act-none');
+          $property.classList.toggle('act-fadeIn');
         });
       });
 
       $title.appendChild($action);
+    })
+  }
+
+  function styleClassesLoader(sectors, doc) {
+    const addClass = (obj) => {
+      const id = obj.id || obj.property;
+      const $obj = (doc || document).querySelector(`#gjs-sm-${id}`);
+      if(Array.isArray(obj.classList)){
+        obj.classList.forEach((className) => {
+          $obj.classList.add(className);
+        })
+      }
+      if(Array.isArray(obj.properties)){
+        obj.properties.forEach(item => addClass(item, $obj))
+      }
+    };
+
+    sectors.forEach(sector => {
+      addClass({id: sector.name.replace(' ', '_').toLowerCase() , ...sector});
     })
   }
 
@@ -108,6 +129,7 @@ const styleManagerUtils = (function() {
     currentSectors.add(sectors)
     moveTraitToSector('gjs-clm-tags', 'gjs-sm-element_metadata')
     actionLoader()
+    styleClassesLoader(sectors);
   }
 
   function initStyleManagerPanel(e) {
