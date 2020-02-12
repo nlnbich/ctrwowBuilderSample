@@ -1,0 +1,11 @@
+.sl-inline-slider {
+    position: relative;
+}
+
+.sl-inline-slider .gjs-sm-label {
+    position: absolute;
+}
+
+.sl-inline-slider .gjs-fields {
+    padding-left: 50px;
+}
