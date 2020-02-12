@@ -6,6 +6,7 @@ const styleManagerUtils = (function() {
   function moveTraitToSector(traitCls, sectorCls) {
     const trait = document.querySelector(`.${traitCls}`)
     const sector = document.getElementById(sectorCls)
+    if(!trait) return
     trait.classList.add('gjs-sm-property')
     trait.classList.add('gjs-sm-stack')
     sector && sector.querySelector('.gjs-sm-properties').appendChild(trait)
@@ -13,13 +14,15 @@ const styleManagerUtils = (function() {
 
   function hideSectors(pfx, sectors) {
     sectors.forEach(sector => {
-      document.getElementById(`${pfx}${sector}`).classList.add('disable')
+      const $sector = document.getElementById(`${pfx}${sector}`);
+      $sector && $sector.classList.remove('disable')
     })
   }
 
   function showSectors(pfx, sectors) {
     sectors.forEach(sector => {
-      document.getElementById(`${pfx}${sector}`).classList.remove('disable')
+      const $sector = document.getElementById(`${pfx}${sector}`);
+      $sector && $sector.classList.remove('disable')
     })
   }
 
@@ -43,7 +46,7 @@ const styleManagerUtils = (function() {
     !model.getTrait('text') && model.get('traits').add({ name: 'text', type: 'content', label: 'Content' })
     hideSectors(pfx, ['paragraph'])
     showSectors(pfx, ['font', 'click-actions'])
-    moveTraitToSector('gjs-trt-traits', 'gjs-sm-click-actions')
+    //moveTraitToSector('gjs-trt-traits', 'gjs-sm-click-actions')
   }
 
   function componentSwitcher(model) {
@@ -61,6 +64,7 @@ const styleManagerUtils = (function() {
         hideSectors(pfx, sectors)
         break
     }
+    moveTraitToSector('gjs-clm-tags', 'gjs-sm-element_metadata')
   }
 
   function initSectors(sectors) {
@@ -68,7 +72,6 @@ const styleManagerUtils = (function() {
     const currentSectors = sm.getSectors()
     currentSectors.reset()
     currentSectors.add(sectors)
-    moveTraitToSector('gjs-clm-tags', 'gjs-sm-element_metadata')
   }
 
   function initStyleManagerPanel(e) {
