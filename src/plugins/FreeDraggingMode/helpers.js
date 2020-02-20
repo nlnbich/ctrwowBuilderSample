@@ -8,7 +8,7 @@ export function calculateRelativePosWithParent(startPointer, currentPointer, par
   return {
     root_x,
     root_y,
-    left: cur_x - root_x - offset.x, // - (start_x - src_x),
-    top: cur_y - root_y - offset.y // - (start_y - src_y)
+    left: cur_x - root_x - (offset.x || 0), // - (start_x - src_x),
+    top: cur_y - root_y - (offset.y || 0) // - (start_y - src_y)
   }
 }

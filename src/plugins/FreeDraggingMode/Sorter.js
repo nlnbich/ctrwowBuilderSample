@@ -77,6 +77,7 @@ function endMove() {
 
       const newModel = this.move(target, model, lastPos)
       console.log(newModel)
+      moved.push(newModel)
 
       // console.log(newModel.getStyle())
       newModel &&
@@ -92,6 +93,17 @@ function endMove() {
 
   this.selectTargetModel()
   this.toMove = null
+
+  dropContent && moved.forEach(m => handleDragEnd.call(this, m, this))
+
+  //Handle for dragend event - when user add new block
+  //Ref: [Droppa]
+  function handleDragEnd(model, dt) {
+    if (!model) return
+    const { em } = this
+    em.set('dragResult', model)
+    em.trigger('canvas:drop', dt, model)
+  }
 }
 
 function movePlaceholder(plh, dims, pos, trgDim) {
@@ -103,13 +115,17 @@ function movePlaceholder(plh, dims, pos, trgDim) {
     this.eV,
     this.ctr__srcOffset
   )
+
+  if (this.dropContent) {
+    plh.style.display = `none`
+    return
+  }
   plh.classList.add('ctr-guidleline')
   plh.style.border = '1px dashed red !important'
   plh.style.top = `${this.el.ownerDocument.body.scrollTop + root_y}px`
   plh.style.left = `${this.el.ownerDocument.body.scrollLeft + root_x}px`
   plh.style.width = `${left}px`
   plh.style.height = `${top}px`
-  plh.style.transitionDuration = '0'
 }
 
 export default class CtrSorter {
@@ -169,8 +185,8 @@ export default class CtrSorter {
 
     const { x, y } = lastModel.view.el.getBoundingClientRect()
     sorter.ctr__srcOffset = {
-      x: event.x - x,
-      y: event.y - y
+      x: event.clientX - x,
+      y: event.clientY - y
     }
 
     this.ctr__drapContent = em.get('dragContent')
