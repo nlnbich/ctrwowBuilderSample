@@ -3,3 +3,24 @@ body {
   margin: 0;
   padding: 0;
 }
+
+#app {
+  width: 100%;
+  height: 100vh;
+}
+
+#app .gjs-comp-selected-parent {
+  outline: 15px solid #ffca6f !important;
+}
+
+.gjs-placeholder,
+.gjs-placeholder {
+  transition: none !important;
+}
+
+.gjs-placeholder.ctr-guidleline {
+  border: 1px dashed red !important;
+}
+.gjs-placeholder.ctr-guidleline * {
+  background-color: unset !important;
+}
