@@ -40,7 +40,7 @@ blockManager.add('my-first-block', {
   content: '<div style="border: 1px solid rgb(204, 204, 204); background-color: #fff; width: 200px; height:200px"></div>'
 })
 
-const blockManager = editor.BlockManager;
+
 blockManager.add('box', {
   label: 'Box',
   content: `<div class="box" style="padding: 20px;">
