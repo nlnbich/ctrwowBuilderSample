@@ -1,4 +1,5 @@
 import loadTraits from './traits'
+import loadStyles from "./sectors/layout/styles"
 import styleManagerUtils from './utils'
 import sectors from './sectors'
 import "./styles/index.css";
@@ -6,6 +7,7 @@ import "./styles/index.css";
 export default (editor, opts = {}) => {
   editor.on('load', function() {
     loadTraits(editor)
+    loadStyles(editor)
     styleManagerUtils.initStyleManagerPanel(editor)
     styleManagerUtils.initSectors(sectors)
   })

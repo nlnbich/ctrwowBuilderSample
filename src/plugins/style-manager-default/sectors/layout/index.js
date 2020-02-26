@@ -18,6 +18,12 @@ const layout = {
           name: "Hidden"
         }
       ]
+    },
+    {
+      name: 'Align Box',
+      property: 'align-box',
+      type: 'align-box', // <- the new type
+      full: 1
     }
   ]
 };
