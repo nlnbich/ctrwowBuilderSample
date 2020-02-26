@@ -27,3 +27,7 @@
 #gjs-sm-font.disable, #gjs-sm-paragraph.disable, #gjs-sm-button-label.disable, #gjs-sm-click-actions.disable {
     display: none !important;
 }
+
+.gjs-radio-item path {
+    fill: white;
+}
