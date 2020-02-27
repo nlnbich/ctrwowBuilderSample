@@ -39,3 +39,14 @@ blockManager.add('my-first-block', {
   type: 'SimpleBox',
   content: '<div style="border: 1px solid rgb(204, 204, 204); background-color: #fff; width: 200px; height:200px"></div>'
 })
+
+blockManager.add('box', {
+  label: 'Box',
+  content: `<div class="box" style="padding: 20px;">
+  <div style="width: 300px">
+    <div style="width: 280px; padding: 2px">
+        <div>Content</div>
+    </div>
+  </div>
+</div>`
+})
