@@ -284,7 +284,6 @@ class Resizer {
      * @param  {Event} e
      */
     move(e) {
-        console.log(e)
         const onMove = this.onMove;
         var mouseFetch = this.mousePosFetcher;
         var currentPos = mouseFetch
