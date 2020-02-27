@@ -112,8 +112,8 @@ export default (editor, opts = {}) => {
         if (!parentStyle.position || parentStyle.position === 'static') {
           validTarget.parent.addStyle({ position: 'relative' })
         }
-        
-        box.addStyle({ transform: "translateX(0) translateY(0)", 'transition': 'all 0.2s' });
+
+        box.addStyle({ transform: "translateX(0) translateY(0)" });
 
         const currentTop = box.getStyle().top
         const currentLeft = box.getStyle().left
