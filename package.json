@@ -13,6 +13,9 @@
     "grapesjs": "0.15.10",
     "grapesjs-blocks-basic": "0.1.8",
     "grunt": "^0.4.5",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
+    "src": "^1.1.2",
     "styles": "^0.2.1"
   },
   "devDependencies": {

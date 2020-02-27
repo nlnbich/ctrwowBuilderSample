@@ -1,5 +1,5 @@
 import { isArray } from 'underscore'
-import { calculateRelativePosWithParent } from './helpers'
+import { calculateRelativePosWithParent } from 'src/plugins/FreeDraggingMode/component-drag/helpers'
 
 //Ref: node_modules/grapesjs/src/utils/Sorter.js >> [startSort]
 function startSorter(src) {
@@ -97,7 +97,7 @@ function endMove() {
   dropContent && moved.forEach(m => handleDragEnd.call(this, m, this))
 
   //Handle for dragend event - when user add new block
-  //Ref: [Droppa]
+  //Ref: [Droppable]
   function handleDragEnd(model, dt) {
     if (!model) return
     const { em } = this
